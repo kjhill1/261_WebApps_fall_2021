@@ -20,10 +20,12 @@
     <nav>
         <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">Daily</a></li>
-            <li><a href="">People</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="">Switch-3</a></li>
+            <li><a href="">Troubleshoot-4</a></li>
+            <li><a href="">Calculator-5</a></li>
+            <li><a href="">Email</a></li>
             <li><a href="">Gallery</a></li>
+            <li><a href="">Final/a></li>
 
         </ul>
    
@@ -61,13 +63,13 @@
 
     <h4>Week #1:</h4>
             <ul>
-                <li><a href=""><li>Site 1</a></li>
+                <li><a href="website/index.html"><li>Website 1</a></li>
             <ul>
 
     <h4>Week #2:</h4>
 
             <ul>
-                <li><a href=""><li>Variables</a></li>
+                <li><a href="weeks/week2/var.php"><li>Variables</a></li>
                 <li><a href="">Currency-Logic</a></li>
                 <li><a href="">Currency </a></li>
                 <li><a href="">Heredoc</a></li>
