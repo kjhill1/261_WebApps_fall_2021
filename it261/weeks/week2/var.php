@@ -173,11 +173,12 @@ echo '<br>';
 $nav[]= 'Home';
 $nav[]= 'About';
 $nav[]= 'Daily';
-$nav[]= 'Conact';
+$nav[]= 'Contact';
 $nav[]= 'Gallery';
 
 // echos HOME
 echo $nav[0];
+echo '<br>';
 
 
 // assocaitive array
@@ -187,12 +188,25 @@ $nav['daily.php']= 'Daily';
 $nav['contact.php']= 'Contact';
 $nav['gallery.php']= 'Gallery';
 
+// (key, realationship)
+// index is is the keey of the array
+// home is the value of the array
 $nav = array (
     'index.php' => 'Home',
     'about.php' => 'About',
     'daily.php' => 'Daily',
     'contact.php' => 'Contact',
-    'about.php' => 'Gallery'
+    'gallery.php' => 'Gallery'
 );
+echo '<pre>';
+var_dump($nav);
+echo '<pre>';
+
+echo '<br>';
 
 
+$show = 'The Crown';
+$show_actor = 'Olivia Colman';
+$show_genre = 'Historical Fiction';
+
+echo 'May Favorite Series during 2020 was "'.$show.'" starring, '.$show_actor.', and it is a '.$show_genre.' ';

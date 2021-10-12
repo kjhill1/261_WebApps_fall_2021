@@ -1,4 +1,4 @@
-<!-- PORTAL PAGE -->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,7 +11,7 @@
 <!-- this is from the HTML website page css is same as website page -->
 
 </head>
-
+<body>
 <header>
     <div class="header-inner">
         <!-- <a href="index.html"> -->
@@ -25,7 +25,7 @@
             <li><a href="">Calculator-5</a></li>
             <li><a href="">Email</a></li>
             <li><a href="">Gallery</a></li>
-            <li><a href="">Final/a></li>
+            <li><a href="">Final</a></li>
 
         </ul>
    
@@ -36,9 +36,7 @@
 
 <div id="wrapper">
 
-<!-- <div id="hero">test hero
 
-</div> closes hero -->
     <main>
     <h2>This is my WONDERFUL Portal Page and a little about me!</h2>
 
@@ -54,55 +52,55 @@
 
     <p>So, good Job, you made it to the end and your reward: None…..It's a hardware problem of course!</p>
 
+    <section> 
+        <h4>Here is what I have for the local while working off a Chromebook and the On Campus Lab. The images are not great but do the trick!</h4>
+        <img class="mamp" src="images/mamp_local.png" alt="mamp local">
+        <img class="mamp" src="images/mamp_sucess.png" alt="mamp sucess">
+        <img class="mamp" src="images/dh_file_set.png" alt="dreamhost file set up">
+        <img class="mamp" src="images/error_message.png" alt="error">
+</section>
+
 </main>
+
 <img id="boating" src="images/boating.jpeg" alt="me">
 
 <aside>
     
-    <h3>Weekly Excersizes <a href="">(Weeks)<a></h3>
+    <h3>Weekly Excersizes</h3>
 
     <h4>Week #1:</h4>
             <ul>
-                <li><a href="website/index.html"><li>Website 1</a></li>
-            <ul>
+                <li><a href="website/index.html">Website 1</a></li>
+            </ul>
 
     <h4>Week #2:</h4>
 
+
             <ul>
-                <li><a href="weeks/week2/var.php"><li>Variables</a></li>
-                <li><a href="">Currency-Logic</a></li>
-                <li><a href="">Currency </a></li>
-                <li><a href="">Heredoc</a></li>
-            <ul>
+                <li><a href="weeks/week2/var.php">Variables</a></li>
+                <li><a href="weeks/week2/var2.php">Variables 2</a></li>
+                <li><a href="weeks/week2/currency_logic.php">Currency-Logic</a></li>
+                <li><a href="weeks/week2/currency.php">Currency</a></li>
+                <li><a href="weeks/week2/heredoc.php">Heredoc</a></li>
+            </ul>
                 
 </aside>
-<!-- 
-<footer>
-    <ul>
-        <li>Copyright &copy; 2021</li>
-        <li>All Rights Reserved</li>
-        <li><a href="">Terms of Use</a></li>
-        <li><a href="">Seven Sites Designs</a></li>
-        <li><a href="">Validate HTML</a></li>
-        <li><a href="">Validate css</a></li>
-    </ul>
 
-</footer> -->
+</div>
+<!-- closes div wrapper -->
 
- </div> <!--closes wrapper -->
+    <footer>
+        <ul>
+            <li>Copyright &copy; 2021</li>
+            <li>All Rights Reserved</li>
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Seven Sites Designs</a></li>
+            <li><a href="http://validator.w3.org/nu/?doc=https%3A%2F%2Fkjhilldesigns.com%2Ffall_21%2fweb_app_it261%2Fit261%2Findex.php">HTML</a></li>
+            <li><a href= "https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fkjhilldesigns.com%2Ffall_21%2fweb_app_it261%2Fit261%2Findex.php">CSS</a></li> 
+           
+        </ul>
 
- <footer>
-    <ul>
-        <li>Copyright &copy; 2021</li>
-        <li>All Rights Reserved</li>
-        <li><a href="">Terms of Use</a></li>
-        <li><a href="">Seven Sites Designs</a></li>
-        <li><a href="">Validate HTML</a></li>
-        <li><a href="">Validate css</a></li>
-    </ul>
+    </footer>
 
-</footer>
-
-<body>
 </body>
 </html>
