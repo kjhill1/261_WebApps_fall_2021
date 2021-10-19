@@ -92,6 +92,7 @@
             <li><a href="weeks/week3/foreach.php">For Each Statements</a></li>
             <li><a href="weeks/week3/forloop.php">For Loop Statements</a></li>
             <li><a href="weeks/week3/date.php">Dates</a></li>
+            <li><a href="weeks/week3/switch.php">Switch</a></li>
         </ul>
         
 </aside>
