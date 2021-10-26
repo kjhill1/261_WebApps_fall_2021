@@ -1,0 +1,27 @@
+
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(171, 149, 149);
+    }
+
+form {
+    width: 400px;
+    margin:30px auto;
+    }
+
+fieldset {
+    color:rgb(224, 254, 239);
+}
+
+legend {
+    font-size: 1.2em;
+    font-style: italic;
+    color: lime;
+
+}
