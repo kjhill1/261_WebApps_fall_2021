@@ -134,3 +134,9 @@ if(isset($_POST['fname'],
 
 </body>
 </html>
+
+{
+echo '<h2>You added ". $num1 ." and .$num2. '"';
+echo ' <p> and the answer is <br> $myTotal ."!"</p>;
+echo'<p><a href="">Reset page</a>'
+}
