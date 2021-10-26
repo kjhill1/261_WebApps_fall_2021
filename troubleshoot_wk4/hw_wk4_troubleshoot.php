@@ -1,4 +1,5 @@
 <!-- this was a hilarious assignment -->
+<!-- ERRORS LISTED AT bottom -->
 
 <!doctype html>
 <html lang="en">
@@ -60,8 +61,9 @@
 
 ?>
 
-    <!-- ERRORS
--Line 1, Moved to 34=lineCAnnot use Echo if PHP is before doctype - PHP nested
+    <!-- ERRORS: I think I may have missed some but I jst scrapped the errors code and did it from scratch because it made more sense for me
+-No <br> Necessarily
+Line 1, Moved to 34=lineCAnnot use Echo if PHP is before doctype - PHP nested
 -Line 3 = Doc type was not called out - Doctype Added
 -Line 11 & 13 =Stylesheet/CSS was not above Title
 -Line 11 -color:red was not assigned to an element or put in the proper 
