@@ -1,10 +1,22 @@
 <?php
+include('config.php');
 include('includes/header.php'); ?>
 
 <div id="wrapper">
 <h1>This is my 1st Website for it261</h1>
-<div id="hero">test hero
+<div id="hero"><?php echo random_pics($photos);?>
 </div> <!-- closes hero -->
+<h2>
+<pre>function random_pics($photos) {
+$i = rand(0, 4);
+$selected_image = ''.$photos[$i].'.jpg';
+echo "<img src="images/'.$selected_image.'" alt=" '.$phtos[$i].'">";
+}
+
+</pre>
+</h2>
+
+
 
     <main>
         <h1><?php echo $headline;?></h1><br>
@@ -18,4 +30,4 @@ test aside
 
 
 <?php
-include('includes/footer.php') ?>
+include('includes/footer.php'); ?>
