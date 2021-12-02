@@ -1,15 +1,12 @@
 <?php 
- // serve page connected to the config and config connected to the credentials page
- 
+
 session_start();
-// session is store info/vars to be used in several different pages
-// ex on amazon always logged on until logged off
-//  server page that connects to the database
+
 
 include('config.php');
 // include('header.php');
 
-// connect to database!(or die!!!)
+
 
 $iConn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or
 die(myError(__FILE__,__LINE__,mysqli_connect_error()));
@@ -24,14 +21,11 @@ if(isset($_POST['reg_user'])){
     $password_1 = mysqli_real_escape_string($iConn, $_POST['password_1']);
     $password_2 = mysqli_real_escape_string($iConn, $_POST['password_2']);
 
-
-
     // want the user to fill all out, 
     // if it is empty... a new function array()push to an array of errors
 
     if (empty($first_name)) {
     array_push($errors, 'First Name is required');
-
     }
 
     if (empty($last_name)) {
@@ -40,8 +34,7 @@ if(isset($_POST['reg_user'])){
 
     if (empty($username)) {
         array_push($errors, 'Username is required');
-    
-        }
+    }
 
     if (empty($email)) {
     array_push($errors, 'Email is required');
@@ -58,7 +51,7 @@ if(isset($_POST['reg_user'])){
 
     // checking table to make sure that names and P/Ws against table THEN selecting it from  DBs table
 
-    $user_check_query ="SELECT * FROM users WHERE username = '$username' OR email = '$email' LIMIT 1 ";
+    $user_check_query ="SELECT * FROM users WHERE username = '$username' OR email = '$email' LIMIT 1";
 
     $result = mysqli_query($iConn, $user_check_query) or die(myError(__FILE__,__LINE__,mysqli_error($iConn)));
 
@@ -88,7 +81,7 @@ $password = md5($password);
 
 // now this will insert the registration data into the table in the DBs. and this will happen by using INSERT
 
-$query - "INSERT INTO users (first_name, last_name, email, username, password) VALUES ('$first_name', '$last_name', '$email', '$password')";
+$query = "INSERT INTO users (first_name, last_name, email, username, password) VALUES ('$first_name', '$last_name', '$email', '$username', '$password')";
 
 
 mysqli_query($iConn, $query);
@@ -109,18 +102,16 @@ if(isset($_POST['login_user'])) {
     $username= mysqli_real_escape_string($iConn, $_POST['username']);
     $password= mysqli_real_escape_string($iConn, $_POST['password']);
 
-    if(emoty($username))  {
+    if(empty($username))  {
 
         array_push($error, 'Password is required');
     }
 
-
     if(count($errors) == 0) {
-        // we are going to count the errors, if equal zero yayayay!
+        
         $password = md5($password);
-        // make sure there is only 1 username and 1 password
-// we will be selecting our information from our table. 
-$query = "SELECT * FROM user WHERE username = $username = '$username' AND password = '$password' ";
+     
+$query = "SELECT * FROM users WHERE username = '$username'";
 
 $result = mysqli_query($iConn, $query);
 // if username and password is = 1 yayayay!

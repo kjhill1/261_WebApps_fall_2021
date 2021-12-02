@@ -2,7 +2,7 @@
 // register.php
 
 include('server.php');
-// include('header.php')
+include('includes/header.php');
 
 ?>
 

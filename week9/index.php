@@ -6,6 +6,7 @@
 session_start();
 
 include('config.php');
+include('includes/header.php');
 
 // if user has no logged in correctly will be directed to login page. 
 
@@ -40,11 +41,10 @@ unset($_SESSION['success']); ?>
 
 if(isset($_SESSION['username'])) : ?>
 <div class="welcome-logout">
-<h3> Well Hello 
-    <?php  echo $_SESSION['username']; ?>
+<h3> Well Hello<?php  echo $_SESSION['username']; ?>
 </h3>
 </div>
-<p><a href="index.php">Log out</a></p>
+<p><a href="index.php?logout=1">Log out</a></p>
 </div>
 <!-- end welcome logout div -->
 

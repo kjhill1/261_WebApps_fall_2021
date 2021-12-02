@@ -4,6 +4,7 @@
 // inout for username and password
 
 include('server.php');
+include('includes/header.php');
 
 // serve page connected to the config and config connected to the credentials page
 
@@ -26,10 +27,10 @@ include('server.php');
 
      <button type="button" onclick="window.location.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ;?>'">Reset</button>
 
-<!--
-include('errors.php'); -->
+<?php
+include('errors.php');
   
-     
+     ?>
 </fieldset>
 
 </form>
