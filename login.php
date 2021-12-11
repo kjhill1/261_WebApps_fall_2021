@@ -2,12 +2,13 @@
 
 // login page 
 // inout for username and password
+ob_start();  // prevents header errors before reading the whole page!
+define('DEBUG', 'TRUE');  // We want to see our errors
 
 include('server.php');
+include('includes/header.php');
 
 // serve page connected to the config and config connected to the credentials page
-
-// include('header.php');
 
 ?>
 
@@ -26,10 +27,14 @@ include('server.php');
 
      <button type="button" onclick="window.location.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ;?>'">Reset</button>
 
-<!--
-include('errors.php'); -->
+<?php
+include('errors.php');
   
-     
+     ?>
 </fieldset>
 
 </form>
+
+</div>
+
+<!-- closes div wrapper NO footer yet -->
