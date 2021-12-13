@@ -1,9 +1,7 @@
 <?php
 
-// login page 
-// inout for username and password
-ob_start();  // prevents header errors before reading the whole page!
-define('DEBUG', 'TRUE');  // We want to see our errors
+ob_start();  
+define('DEBUG', 'TRUE');
 
 include('server.php');
 include('includes/header.php');
@@ -26,6 +24,8 @@ include('includes/header.php');
      <button type="submit" name="login_user" class="btn">Login</button>
 
      <button type="button" onclick="window.location.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ;?>'">Reset</button>
+
+     <button type="submit" name="register" class="btn"><a href="register.php">Get a Login Here</button>
 
 <?php
 include('errors.php');

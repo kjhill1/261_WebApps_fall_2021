@@ -10,25 +10,20 @@
 
 </head>
 
-
 <body class="<?php echo $body?>">
-
 
 <header>
     <div class="header-inner">
         <a href="index.php">
-             <img id="logo" src="images/music.png" alt="logo"></a>
-<ul>
-        <?php
-    echo my_nav($nav);
+             <img id="logo" src="images/logo.svg" alt="logo"></a>
+<nav>
 
-    ?>
-        </ul>
+    <ul>
+        <?php echo my_nav($nav);?>
+    </ul>
    
     </nav> 
-    </div> <!-- closes header-inner -->
-    
- 
-
-    
+    </div> 
+    <!-- closes header-inner -->
+        
 </header>

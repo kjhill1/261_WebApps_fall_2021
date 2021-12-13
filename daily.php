@@ -4,17 +4,8 @@ include('includes/header.php'); ?>
 
 
 <div id="wrapper" class="<?php echo $class?>">
-<h2>What to play today!</h2>
-    
- <?php 
- echo $band;
- ?>
 
-<img class="bands" src="../images/<?php echo $pic;?>" alt="<?php echo $alt;?>">
-<p><?php echo $content;?></p>
-<h3>Daily Does of Music:<br></h3>
-
-<div class='daily'>
+<div id="day">
     <ul>
       
       <li><a href="daily.php?today=Monday">Monday</a></li>
@@ -22,10 +13,24 @@ include('includes/header.php'); ?>
       <li><a href="daily.php?today=Wednesday">Wednesday</a></li>
       <li><a href="daily.php?today=Thursday">Thursday</a></li>
       <li><a href="daily.php?today=Friday">Friday</a></li>
+      <li><a href="daily.php?today=Saturday">Saturday</a></li>
+      <li><a href="daily.php?today=Sunday">Sunday</a></li>
 
     </ul>
 </div>
-<!-- end daily div -->
+<!-- ends section div-->
+
+<h2 id="recommend">Recommendation of the Day</h2>
+
+<div class="section">
+<img class="soap" src="images/<?php echo $pic;?>" alt="<?php echo $alt;?>">
+<div id="description">
+<?php echo $soap;?>
+<p><?php echo $content;?></p>
+</div>
+<!-- ends day div -->
+</div>
+<!-- ends description div-->
 
 <?php
 include('includes/footer.php') ?>

@@ -1,33 +1,39 @@
 <?php
 include('config.php');
-include('includes/header.php'); ?>
+include('includes/header.php'); 
+?>
 
-<div id="wrapper">
-<h1>This is my 1st Website for it261</h1>
-<div id="hero"><?php echo random_pics($photos);?>
-</div> <!-- closes hero -->
-<h2>
-<pre>function random_pics($photos) {
-$i = rand(0, 4);
-$selected_image = ''.$photos[$i].'.jpg';
-echo "<img src="images/'.$selected_image.'" alt=" '.$phtos[$i].'">";
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    $_SESSION['msg'] = 'You must log in first';
+    //redirect them to the login page
+    header('Location: login.php');
 }
 
-</pre>
-</h2>
+if(isset($_GET['logout'])){
+    session_destroy();
+    unset($_SESSION['username']);
+    //redirect them back to the login page
+    header('Location: login.php');
+}
 
 
+if(isset($_SESSION['username'])) : ?> 
+<?php echo 'Hello'; ?>
+<?php echo $_SESSION['username']; ?>
+<p><a href="index.php?logout='1' ">Log out!</a></p>
 
-    <main>
-        <h1><?php echo $headline;?></h1><br>
-  
-        <p>I love Halloween. The one time of year when everyone wears a mask … not just me. I am not a killer. I'm a sociopath; there's not much he can do for me. Finding a needle in a haystack isn't hard when every straw is computerized.</p>
-    </main>
-   
-<aside>
-test aside
-</aside>
+<?php endif ?>
 
+<div id="wrapper">
+<h1><?php echo $headline;?></h1><br>
+<div class="container">
+<img class="hero" src="images/soap_tues.JPG" alt="logo">
+<img class="hero" src="images/soap_wed.JPG" alt="logo">
+<img class="hero" src="images/soap_fri.JPG" alt="logo">
+
+</div> <!-- closes container -->
 
 <?php
 include('includes/footer.php'); ?>

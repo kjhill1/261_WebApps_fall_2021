@@ -18,42 +18,35 @@ method="post">
     <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" value="<?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST ['phone']); ;?>">
     <span class="error"><?php echo $phone_Err;?></span>
 
-<label for="interest"><u>I am interested in:</u></label>
+<label for="interest"><u>My Feedback is About:</u></label>
 
     <ul>
-        <li><input type="checkbox" name="interest[]" value="design"<?php if(isset($_POST['interest']) && in_array('design', $interest)) echo 'checked="checked"';?>>Web Design</li>
-
-        <li><input type="checkbox" name="interest[]" value="brand"<?php if(isset($_POST['interest']) && in_array('cab', $interest))  echo 'checked="checked"';?>>Brand Design</li>
-        <li><input type="checkbox" name="interest[]" value="life"<?php if(isset($_POST['interest']) && in_array('life', $interest)) echo 'checked="checked"' ;?>>The Answers to life</li>
-        <li><input type="checkbox" name="interest[]" value="not sure"<?php if(isset($_POST['interest']) && in_array('not sure', $interest)) echo 'checked="checked"' ;?>>Not Sure</li> 
-    
+        <li><input type="checkbox" name="interest[]" value="design"<?php if(isset($_POST['interest']) && in_array('design', $interest)) echo 'checked="checked"';?>>Soaps</li>
+        <li><input type="checkbox" name="interest[]" value="brand"<?php if(isset($_POST['interest']) && in_array('cab', $interest))  echo 'checked="checked"';?>>General Skin Care</li>
+        <li><input type="checkbox" name="interest[]" value="life"<?php if(isset($_POST['interest']) && in_array('life', $interest)) echo 'checked="checked"' ;?>>Samples</li>
+        <li><input type="checkbox" name="interest[]" value="life"<?php if(isset($_POST['interest']) && in_array('life', $interest)) echo 'checked="checked"' ;?>>Feedback On a Product</li>
+        <li><input type="checkbox" name="interest[]" value="life"<?php if(isset($_POST['interest']) && in_array('life', $interest)) echo 'checked="checked"' ;?>>Product Suggestion</li>
+       
     </ul> 
 <span class="error"><?php echo $interest_Err;?></span>
 
-<label for="business"><u>Type of Business</u></label>
+<label for="skin_type"><u>My Skin Type is</u></label>
 
-<select name="business">
-    <option value="" NULL<?php if(isset($_POST['business']) && $_POST['business'] == NULL) echo 'selected="unselected"' ;?>
+<select name="skin_type">
+    <option value="skin_type" <?php if(isset($_POST['skin_type']) && $_POST['skin_type'] == NULL) echo 'selected="unselected"' ;?>
     
     >Select One</option>
-    <option value="e-commerce"<?php if(isset($_POST['business']) && $_POST['business'] == 'nw') echo 'selected="unselected"' ;?>>E-commerce</option>
-    <option value="service"<?php if(isset($_POST['business']) && $_POST['business'] == 'service') echo 'selected="unselected"' ;?>>Business Services</option>
-    <option value="hospitality" <?php if(isset($_POST['business']) && $_POST['business'] == 'hospitality') echo 'selected="unselected"' ;?>>Hospitality</option>
-    <option value="other" <?php if(isset($_POST['business']) && $_POST['business'] == 'other') echo 'selected="unselected"' ;?>>Other</option>
-    </select>
-
-    <span class="error"><?php echo $business_Err;?></span>
+    <option value="normal"<?php if(isset($_POST['skin_type']) && $_POST['skin_type'] == 'normal') echo 'selected="unselected"' ;?>>Normal</option>
+    
+    <option value="special"<?php if(isset($_POST['skin_type']) && $_POST['skin_type'] == 'special') echo 'selected="unselected"' ;?>>Special</option>
+    
+    <option value="challenging" <?php if(isset($_POST['skin_type']) && $_POST['skin_type'] == 'challenging') echo 'selected="unselected"' ;?>>Challenging</option>
+    
+    <span class="error"><?php echo $skin_type_Err;?></span>
 
     <label for="comments">Tell Me More</label>
-    <textarea name="comments"><?php if(isset($_POST['comments'])) echo htmlspecialchars($_POST ['comments']) ;?> Please give your comments</textarea>
+    <textarea name="comments"><?php if(isset($_POST['comments'])) echo htmlspecialchars($_POST ['comments']) ;?>Please give your comments</textarea>
     <span class="error"><?php echo $comments_Err;?></span>
-
-    <label for="privacy"><u>Do you want privacy?</u></label>
-        <ul>
-            <li><input type="radio" name="privacy" value="agree" <?php if(isset($_POST['privacy']) && $_POST['privacy'] == 'agree') 
-       echo 'checked ="checked" ';?>>I agree!</li>
-        </ul>
-        <span class="error"><?php echo $privacy_Err;?></span>
 
 
     <input type="submit" value="Send it!">

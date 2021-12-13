@@ -33,7 +33,7 @@ include('includes/header.php');
     <button type="submit" name="reg_user" class="btn">Register</button>
  
     <button type="button" onclick="window.location.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ;?>'">Reset</button>
-
+    <button type="submit" name="register" class="btn"><a href="login.php">Login Here</button>
 <?php 
 include('errors.php');?>
 

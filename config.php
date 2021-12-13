@@ -12,19 +12,16 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
 // **********NAV*********
 $nav['index.php'] = 'Home';
+$nav['shop.php'] = 'Shop';
+$nav['daily.php'] = 'Deal of the Day';
 $nav['about.php'] = 'About';
-$nav['daily.php'] = 'Daily';
-$nav['project.php'] = 'Project';
+$nav['shop.php'] = 'Shop';
 $nav['contact.php'] = 'Contact';
-// $nav['thx.php'] = 'Thanks';
-$nav['gallery.php'] = 'Gallery';
 $nav['login.php'] = 'Login Page';
-
 $nav['register.php'] = 'Registration Page';
-$nav['../index.php'] = 'Back to Portal Page';
 
-$logoDaily ='images/music.png';
-$logo = 'images/phplogo.png';
+$logoDaily ='images/logo.svg';
+$logo = 'images/logo.svg';
 
 
 // create a function for navigation
@@ -53,13 +50,13 @@ switch (THIS_PAGE) {
     case 'index.php';
     $title = 'Home Page of Our IT261 Website';
     $body = 'home';
-    $headline = 'Welcome Home!';
+    $headline = 'Welcome Home';
     break;
 }
 
 switch (THIS_PAGE) {
     case 'about.php';
-    $title = 'About Page of Our IT261 Website';
+    $title = 'About Me';
     $body = 'about inner';
     $headline = 'Welcome to my About Page';
     break;
@@ -67,39 +64,39 @@ switch (THIS_PAGE) {
 
 switch (THIS_PAGE) {
     case 'daily.php';
-    $title = 'Daily Page of Our IT261 Website';
+    $title = 'Daily Clean';
     $body = 'home';
-    $headline = 'Welcome to  my Daily Page - Switch Homework will display!';
+    $headline = 'Recommendation du Jour';
     break;
 }
 
 switch (THIS_PAGE) {
-    case 'project.php';
-    $title = 'Project Soap Page';
+    case 'shop.php';
+    $title = 'Shop';
     $body = 'project inner';
-    $headline = 'Welcome to my Project Page!';
+    $headline = 'Get Clean';
     break;
 }
 
-switch (THIS_PAGE) {
-    case 'gallery.php';
-    $title = 'Gallery Page of Our IT261 Website';
-    $body = 'gallery.php';
-    $headline = 'Welcome to my Gallery Page!';
-    break;
-}
+// switch (THIS_PAGE) {
+//     case 'gallery.php';
+//     $title = 'Gallery Page of Our IT261 Website';
+//     $body = 'gallery.php';
+//     $headline = 'Welcome to my Gallery Page!';
+//     break;
+// }
 
 switch (THIS_PAGE) {
     case 'contact.php';
-    $title = 'Contact Page of Our IT261 Website';
+    $title = 'Contact Me';
     $body = 'contact inner';
-    $headline = 'Welcome to my Contact Page!';
+    $headline = 'Feedback is a Gift';
     break;
 }
 
 switch (THIS_PAGE) {
     case 'thx.php';
-    $title = 'Thank You!';
+    $title = 'Request Sent';
     $body = '';
     $headline = 'Thank you for Your Feedback';
     break;
@@ -155,56 +152,70 @@ $today = $_GET['today'];
 
 switch ($today) {
     case 'Monday':
-        $band = '<h3>Today is about the Smashing Pumpkins</h3>';
-        $pic = 'pumpkins.jpg';
-        $alt = 'The Smashing Pumpkins';
+        $soap = '<h3>For Winter Skin Care</h3>';
+        $pic = 'soap_mon.jpg';
+        $alt = 'Aloe & Shea Soap';
         $class = 'mon';
-        $content = 'The<b><a href="https://en.wikipedia.org/wiki/The_Smashing_Pumpkins"> Smashing Pumpkins</a></b> are an American alternative rock band from Chicago. Formed in 1988 by frontman Billy Corgan, D\'arcy Wretzky, James Iha, and Jimmy Chamberlin, the band has undergone many line-up changes. The current lineup features Corgan, Chamberlin, Iha and guitarist Jeff Schroeder.<br>
-        <b>Genre: </b> Alternative/Indie';
+        $content = 'The Aloe and Shea Butter Bar is excellent for Winter Skin care.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
         break;
     }
 
 switch ($today) {
         case 'Tuesday':
-        $band = '<h3>Today is Yeah Yeah Yeahs Day</h3>';
-        $pic = 'yeahyeahyeahs.jpg';
-        $alt = 'Yeah Yeah Yeahs';
+        $soap = '<h3>For Daily Used for Normal Skin</h3>';
+        $pic = 'soap_tues.JPG';
+        $alt = 'White Bar';
         $class = 'tues';
-        $content = 'The <b><a href="https://en.wikipedia.org/wiki/Yeah_Yeah_Yeahs">Yeah Yeah Yeahs</a></b> are an American indie rock band formed in New York City in 2000. The group is composed of vocalist and pianist Karen O, guitarist and keyboardist Nick Zinner, and drummer Brian Chase.<br>
-        <b>Genres: </b> Rock, Alternative/Indie';
+        $content = 'Plain White Bar is perfect for daily use, as it is simple, gentle and cleansing. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non providen';
         break;
     }
 
     switch ($today) {
         case 'Wednesday':
-            $band = '<h3>Today is Glass Animals Day</h3>';
-            $pic = 'glass_animals.png';
-            $alt = 'Glass Animals';
+            $soap = '<h3>For Detox and Conditioning</h3>';
+            $pic = 'soap_wed.JPG';
+            $alt = 'Aloe & Green Clay';
             $class = 'wed';
-            $content = '<b><a href="https://en.wikipedia.org/wiki/Glass_Animals">Glass Animals</a></b> are a British indie rock band formed in Oxford in 2010. Led by singer, songwriter, and producer Dave Bayley, the  group also features his childhood friends Joe Seaward, Ed Irwin-Singer and Drew MacFarlane. Bayley wrote and produced all three Glass Animals albums.<br>
-            <b>Genre: </b>Alternative/Indie';
+            $content = 'The Aloe and Green Clay is both nuriting with the ALie and the clay pulls out imputies that accumlite throuigh out the day.  similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. ';
             break;
         }
 
     switch ($today) {
         case 'Thursday':
-            $band = '<h3>Today 50 Cent DAY!</h3>';
-            $pic = '50_cent.png';
-            $alt = '50 Cent';
+            $soap = '<h3>(Not So) Garden Variety</h3>';
+            $pic = 'soap_thurs.JPG';
+            $alt = 'Garden Variety';
             $class = 'thurs';
-            $content = 'Curtis James Jackson III, known professionally as <b><a href="https://en.wikipedia.org/wiki/50_Cent">50 Cent </a></b>, is an American rapper, actor, television producer, and businessman. Known for his impact in the hip hop industry, he has been described as a "master of the nuanced art of lyrical brevity."<br>
-            <b>Genre: </b>Hip Hop';
+            $content = 'Containing an Variety of Botanical that can be grown in an urban garden this will add nutrients and minerals to your skin routine all in bar. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimu';
             break;
         }
 
     switch ($today) {
         case 'Friday':
-            $band = '<h3>Today is Feist Day</h3>';
-            $pic = 'feist.png';
-            $alt = 'Feist';
+            $soap = '<h3>Honey, Oatmeal, with Rose Hip Oil and Lavender</h3>';
+            $pic = 'soap_fri.JPG';
+            $alt = 'Oatmeal Bar';
             $class = 'fri';
-            $content = '<a href="https://en.wikipedia.org/wiki/Feist_(singer)"><b>Leslie Feist</b></a>, known mononymously as Feist, is a Canadian indie pop singer-songwriter and guitarist, performing both as a solo artist and as a member of the indie rock group Broken Social Scene. Feist launched her solo music career in 1999 with the release of Monarch.<br>
-            <b>Genre:</b> Indie rock, Folk music, Indie pop, Pop rock, Indie folk, Baroque pop, Anti-folk, Dance/Electronic, Pop, Urban Folk';
+            $content = 'This is the Soapmakers Favorite. Blended to protect and sooth sensitive skin before and after exposure to elements. omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis';
+            break;
+        }
+        switch ($today) {
+            case 'Saturday':
+                $soap = '<h3>Enjoy this Saturday No matter what you are doing!</h3>';
+                $pic = 'soap_sat.png';
+                $alt = 'Enjoy this day';
+                $class = 'sat';
+                $content = 'But remember to wash your face!!';
+                break;
+            }
+
+      switch ($today) {
+        case 'Sunday':
+            $soap = '<h3>Relax it is Sunday!</h3>';
+            $pic = 'soap_sun.png';
+            $alt = 'Face mask';
+            $class = 'sun';
+            $content = 'Do a nice mask and stay in those comfy clothes!';
             break;
         }
 
@@ -231,32 +242,21 @@ $photo[4] = 'photo5';
 
 // we want to display photos randomly $i= photo 1-5, 0 = photo number 1
 
-
-function random_pics($photos) {
-$i = rand(0, 4);
-$selected_image = ''.$photos[$i].'.jpg';
-echo '<img src="images/'.$selected_image.'" alt=" '.$photos[$i].'"width="900" height="300">';
-
-}
-
     $first_name = '';
     $last_name = '';
     $email = '';
     $phone = '';
     $interest = '';
     $comments = '';
-    $business = '';
-    $privacy = '';
-    $phone = '';
+    $skin_type = '';
 
     $first_name_Err = "";
     $last_name_Err = "";
     $email_Err = '';
     $phone_Err = '';
     $interest_Err = '';
-    $business_Err = '';
+    $skin_type_Err = '';
     $comments_Err = "";
-    $privacy_Err = "";
     
 
     if($_SERVER ['REQUEST_METHOD'] == 'POST') {
@@ -298,17 +298,12 @@ echo '<img src="images/'.$selected_image.'" alt=" '.$photos[$i].'"width="900" he
         $interest = $_POST['interest'];
     }
 
-    if($_POST['business'] == NULL) {
-        $business_Err = 'Please tell me what type of business you have?';
+    if(empty($_POST['skin_type'])) {
+        $skin_type_Err = 'What is your skin type?';
     } else {
-        $business = $_POST['business'];
+        $skin_type = $_POST['skin_type'];
     }
 
-    if(empty($_POST['privacy'])) {
-        $privacy_Err = 'Please select.';
-    } else {
-        $privacy = $_POST['privacy'];
-    }
 
 
 if(isset(
@@ -317,28 +312,27 @@ if(isset(
         $_POST['email'],
         $_POST['phone'],
         $_POST['interest'],
-        $_POST['business'],
+        $_POST['skin_type'],
         $_POST['comments'],
-        $_POST['privacy']
         
         ))
 
     {
-        $to = 'szemeo@mystudentswa.com';
+        $to = 'kelly@kjhilldesigns.com';
         $subject = 'Test Email,' .date('m/d/y');
         $body = '
         The First Name is: '.$first_name.' '.PHP_EOL.'
         The Last Name is: '.$last_name.' '.PHP_EOL.'
         Email: '.$email.' '.PHP_EOL.' 
         Phone: '.$phone.' '.PHP_EOL.'
-        Type of Business: '.$business.' '.PHP_EOL.'
+        Type of Skin: '.$skin_type.' '.PHP_EOL.'
 
         Comments: '.$comments.' '.PHP_EOL.'
         ';
 
         $headers = array(
 
-            'From' => 'noreply@mystudentswa.com',
+            'From' => 'noreply@kjhilldesigns.com',
             'Reply-to' => ''.$email.''
         );
 
