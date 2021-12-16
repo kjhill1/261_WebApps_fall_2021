@@ -18,7 +18,6 @@ if(isset($_GET['logout'])){
     header('Location: login.php');
 }
 
-
 if(isset($_SESSION['username'])) : ?> 
 <p><?php echo 'Hello '; ?>
 <?php echo $_SESSION['username']; ?>
